@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide, mod, sqrt } from "../math.js";
+import { add, subtract, multiply, divide, mod, sqrt, pow } from "../math.js";
 
 describe("add", () => {
   test("adds two positive numbers", () => expect(add(2, 3)).toBe(5));
@@ -35,4 +35,9 @@ describe("mod", () => {
 
 describe("sqrt", () => {
   test("sqrt two numbers", () => expect(sqrt(4, 2)).toBe(2));
+});
+
+
+describe("pow", () => {
+  test("pow two numbers", () => expect(pow(2, 2)).toBe(4));
 });
