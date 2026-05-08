@@ -19,3 +19,8 @@ export function mod (a, b) {
   if (b === 0) throw new Error("Division by zero");
   return a % b;
 }
+
+
+export function sqrt (a, b) {
+  return Math.sqrt(a, b);
+}
