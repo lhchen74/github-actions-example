@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide } from "../math.js";
+import { add, subtract, multiply, divide, sin, cos, tan } from "../math.js";
 
 describe("add", () => {
   test("adds two positive numbers", () => expect(add(2, 3)).toBe(5));
@@ -21,5 +21,27 @@ describe("divide", () => {
   test("returns a float", () => expect(divide(1, 3)).toBeCloseTo(0.333));
   test("throws on division by zero", () => {
     expect(() => divide(5, 0)).toThrow("Division by zero");
+  });
+});
+
+describe("sin", () => {
+  test("sin(0) = 0",    () => expect(sin(0)).toBeCloseTo(0));
+  test("sin(30) = 0.5", () => expect(sin(30)).toBeCloseTo(0.5));
+  test("sin(90) = 1",   () => expect(sin(90)).toBeCloseTo(1));
+  test("sin(180) = 0",  () => expect(sin(180)).toBeCloseTo(0));
+});
+
+describe("cos", () => {
+  test("cos(0) = 1",    () => expect(cos(0)).toBeCloseTo(1));
+  test("cos(60) = 0.5", () => expect(cos(60)).toBeCloseTo(0.5));
+  test("cos(90) = 0",   () => expect(cos(90)).toBeCloseTo(0));
+  test("cos(180) = -1", () => expect(cos(180)).toBeCloseTo(-1));
+});
+
+describe("tan", () => {
+  test("tan(0) = 0",  () => expect(tan(0)).toBeCloseTo(0));
+  test("tan(45) = 1", () => expect(tan(45)).toBeCloseTo(1));
+  test("tan(90) throws", () => {
+    expect(() => tan(90)).toThrow("tan is undefined at this angle");
   });
 });
