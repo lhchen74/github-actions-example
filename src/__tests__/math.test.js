@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide } from "../math.js";
+import { add, subtract, multiply, divide, mod } from "../math.js";
 
 describe("add", () => {
   test("adds two positive numbers", () => expect(add(2, 3)).toBe(5));
@@ -21,5 +21,13 @@ describe("divide", () => {
   test("returns a float", () => expect(divide(1, 3)).toBeCloseTo(0.333));
   test("throws on division by zero", () => {
     expect(() => divide(5, 0)).toThrow("Division by zero");
+  });
+});
+
+
+describe("mod", () => {
+  test("mod two numbers", () => expect(mod(10, 2)).toBe(0));
+  test("throws on division by zero", () => {
+    expect(() => mod(5, 0)).toThrow("Division by zero");
   });
 });
