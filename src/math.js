@@ -24,3 +24,8 @@ export function mod (a, b) {
 export function sqrt (a, b) {
   return Math.sqrt(a, b);
 }
+
+
+export function pow (a, b) {
+  return Math.pow(a, b);
+}
